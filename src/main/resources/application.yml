@@ -1,1 +1,22 @@
-svc.message: local message
+# tomcat configurations
+server:
+  port: 8080
+  tomcat:
+    max-threads: 250
+
+# spring configurations
+spring:
+  application:
+    name: profile-svc
+
+# actuator related
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+
+# app specific
+svc:
+  message: Hello hello
+
