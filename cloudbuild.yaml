@@ -1,6 +1,6 @@
 substitutions:
   _IMAGE_NAME: profile-svc-jib
-  PROJECT_ID: vino9org
+  _PROJECT_ID: vino9org
 
 steps:
 
@@ -33,7 +33,7 @@ steps:
   - -X
 
   # Sets the target image reference to push to.
-  - -Dimage=gcr.io/${PROJECT_ID}/${_IMAGE_NAME}
+  - -Dimage=gcr.io/${_PROJECT_ID}/${_IMAGE_NAME}
 
   volumes:
   - name: user.home
