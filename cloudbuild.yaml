@@ -1,6 +1,5 @@
 substitutions:
   _IMAGE_NAME: profile-svc-jib
-  _PROJECT_ID: vino9org
 
 steps:
 
