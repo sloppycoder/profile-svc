@@ -33,3 +33,9 @@ bin
 # spring-boot
 application.pid
 application.port
+
+# flight recording
+*.jfr
+
+# misc
+*.sh

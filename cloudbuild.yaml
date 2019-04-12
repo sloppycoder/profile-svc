@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/mvn'
+  args: ['install']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--tag=gcr.io/vino9org/profile-svc-jib', '.']
+images: ['gcr.io/vino9org/profile-svc-jib']
+
