@@ -3,6 +3,14 @@ server:
   port: 8080
   tomcat:
     max-threads: 250
+    # print access log to console for debugging
+    accesslog:
+      enabled: true
+      directory: /dev
+      prefix: stdout
+      buffered: false
+      suffix:
+      file-date-format:
 
 # spring configurations
 spring:
