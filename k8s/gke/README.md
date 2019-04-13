@@ -19,7 +19,7 @@ kubectl describe prometheus -n monitoring
 git clone https://github.com/coreos/prometheus-operator.git
 
 cd prometheus-operator
-git checkout release-0.19 # I used this branch for testing
+git checkout release-0.29 # I used this branch for testing
 kubectl apply -f namespace_monitoring.json
 kubectl -f -R contrib/kube-prometheus/manifests/
 
