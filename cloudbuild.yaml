@@ -37,7 +37,7 @@ steps:
   - name: user.home
     path: /root
 
-- # update the deployment
+- # update the deployment in GKE
   name: 'gcr.io/cloud-builders/kubectl'
   args: ['set', 'image', 'deployment/${_APP_DEPLOYMENT_NAME}', 'profile-svc-jib=gcr.io/${_PROJECT_ID}/${_IMAGE_NAME}', '-n', '${_APP_CONTAINER_CLUSTER}' ]
   env:

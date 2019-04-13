@@ -1,0 +1,39 @@
+---
+apiVersion: "extensions/v1beta1"
+kind: Deployment
+metadata:
+  name: profile-svc
+  labels:
+    app: profile-svc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: profile-svc
+  template:
+    metadata:
+      labels:
+        app: profile-svc
+    spec:
+      containers:
+        - name: profile-svc-jib
+          image: "gcr.io/vino9org/profile-svc-jib:latest"
+          ports:
+            - containerPort: 8080
+              name: web
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: profile-svc
+  labels:
+    app: profile-svc
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8080
+      targetPort: web
+      name: web
+  selector:
+    app: profile-svc
