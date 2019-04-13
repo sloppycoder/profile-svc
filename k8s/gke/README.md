@@ -2,7 +2,6 @@
 
 
 ### Files
-* [namespace_monitoring.json](namespace_monitoring.json) is used to create new monitoring namespace.
 * [deploy.yaml](deploy.yaml) creates deployment and it's realted service object.
 * [servicemonitor.yml](servicemonitor.yaml) creates the service monitor object. 
 
