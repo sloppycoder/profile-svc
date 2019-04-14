@@ -23,8 +23,9 @@ management:
     web:
       exposure:
         include: prometheus
-
-# app specific
+      base-path: /
+      path-mapping:
+        prometheus: metrics
 svc:
   message: Hello hello
 
